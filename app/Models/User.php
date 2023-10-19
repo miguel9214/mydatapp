@@ -47,4 +47,9 @@ class User extends Authenticatable
     public function products(){
         return $this->HasMany(Product::class);
     }
+
+    
+    public function mercadoLibre(){
+        return $this->HasMany(MercadoLibre::class);
+    }
 }

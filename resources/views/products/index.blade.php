@@ -11,7 +11,7 @@
             <div class="overflow-hidden bg-white shadow-sm sm:rounded-lg">
                 <div class="p-6 text-gray-900" >
                     <table class="table table-bordered table-hover">
-                        <thead><tr><th>SKU</th><th>TITULO</th><th>IMAGEN</th><th>DESCRIPCION</th><th>PRECIO</th><th>CATEGORIA</th></tr></thead>
+                        <thead><tr><th>SKU</th><th>TITULO</th><th>IMAGEN</th><th>DESCRIPCION</th><th>PRECIO</th><th>CATEGORIA</th><th>ACCIONES</th></tr></thead>
                         @foreach ($products as $prod)
                         {{-- FILA --}}
                         <tr class="text-sm border-gray-200 boder-b">
@@ -22,7 +22,6 @@
                             <td class="px-6 py-4">{{$prod->description}}</td>
                             <td class="px-6 py-4">{{$prod->price}}</td>
                             <td class="px-6 py-4">{{$prod->category}}</td>
-                            
                             <td class="px-6 py-4">
                                 <a href="{{route('products.edit', $prod)}}" class="text-indigo-600">Editar</a>
                             </td>
